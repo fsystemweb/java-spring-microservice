@@ -23,4 +23,4 @@
 
 ## create package
     -   mvn package
-    -   run jar -> java -jat file.jar
+    -   run jar -> java -jar file.jar
