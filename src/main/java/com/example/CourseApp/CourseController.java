@@ -1,9 +1,9 @@
 package com.example.CourseApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -19,5 +19,20 @@ public class CourseController {
     @RequestMapping("/courses")
     public List<Course> getCourses(){
         return courseRepository.findAll();
+    }
+
+    @RequestMapping("/courses/{id}")
+    public Course getCourse(@PathVariable("id") BigInteger id){
+        return courseRepository.getOne(id);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value="/courses")
+    public void saveCourse(@RequestBody Course course){
+        courseRepository.save(course);
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE, value="/courses/{id}")
+    public void deleteCourse(@PathVariable("id") BigInteger id){
+        courseRepository.deleteById(id);
     }
 }
