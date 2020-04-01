@@ -2,20 +2,24 @@ package com.example.CourseApp;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.math.BigInteger;
-
 /**
  * Created by x380342 on 26/03/2020.
  */
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
+@Table(name = "course")
 public class Course {
     @Id
     private BigInteger courseid;
+
+    @Size(max = 50)
     private String coursename;
+
+    @Size(max = 50)
     private String author;
 
     public Course() {

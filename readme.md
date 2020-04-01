@@ -10,7 +10,7 @@
 ## Database
     SQL Server -> institute
 
-## Dependecies
+## Dependencies
     https://start.spring.io/
 
     -   Spring Web
@@ -19,6 +19,7 @@
 
 ## IntelliJ
    - port -> -Dserver.port=8090 (VM options)
+    or put server.port=8090 in properties
 
 
 ## create package
