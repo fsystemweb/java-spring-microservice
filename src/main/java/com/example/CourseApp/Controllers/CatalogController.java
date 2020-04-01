@@ -1,5 +1,6 @@
-package com.example.CourseApp;
+package com.example.CourseApp.Controllers;
 
+import com.example.CourseApp.Models.Course;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;

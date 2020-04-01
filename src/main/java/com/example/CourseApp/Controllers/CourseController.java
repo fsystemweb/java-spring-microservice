@@ -1,5 +1,7 @@
-package com.example.CourseApp;
+package com.example.CourseApp.Controllers;
 
+import com.example.CourseApp.Models.Course;
+import com.example.CourseApp.Repositories.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

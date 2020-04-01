@@ -1,5 +1,6 @@
-package com.example.CourseApp;
+package com.example.CourseApp.Repositories;
 
+import com.example.CourseApp.Models.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.math.BigInteger;
