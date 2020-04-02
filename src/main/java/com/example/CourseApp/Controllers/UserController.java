@@ -24,8 +24,13 @@ public class UserController {
     }
 
     @RequestMapping("/users/{id}")
-    public List<User> getByUserId(@PathVariable("id") BigInteger id){
-        return userRepository.findByuserId(id);
+    public List<User> getByUserid(@PathVariable("id") BigInteger id){
+        return userRepository.findByuserid(id);
+    }
+
+    @RequestMapping("/users/course/{id}")
+    public List<User> getByCourseid(@PathVariable("id") BigInteger id){
+        return userRepository.findBycourseid(id);
     }
 
     @RequestMapping(method = RequestMethod.POST, value="/users")
@@ -33,8 +38,5 @@ public class UserController {
         userRepository.save(user);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value="/users/{id}")
-    public void deleteUser(@PathVariable("id") BigInteger id){
-        userRepository.deleteById(id);
-    }
+
 }

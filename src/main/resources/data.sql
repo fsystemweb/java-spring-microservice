@@ -1,4 +1,6 @@
 
+SET GLOBAL time_zone = '-3:00';
+
 INSERT INTO `course` (`courseid`, `author`, `coursename`) VALUES
 	(100.00, 'Angel Lopez', 'Angular'),
 	(101.00, 'Angel Lopez', 'React'),
